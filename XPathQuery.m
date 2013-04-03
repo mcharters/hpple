@@ -163,7 +163,7 @@ NSArray *PerformHTMLXPathQuery(NSData *document, NSString *query)
   xmlDocPtr doc;
 
   /* Load XML document */
-  doc = htmlReadMemory([document bytes], (int)[document length], "", NULL, HTML_PARSE_NOWARNING | HTML_PARSE_NOERROR);
+  doc = htmlReadMemory([document bytes], (int)[document length], "", NULL, HTML_PARSE_NOWARNING | HTML_PARSE_NOERROR | HTML_PARSE_RECOVER);
 
   if (doc == NULL)
     {
